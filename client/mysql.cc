@@ -1484,6 +1484,7 @@ void handle_ctrlc_signal(int sig)
 
   /* Skip rest if --sigint-ignore is used. */
   if (opt_sigint_ignore)
+    com_clear(&glob_buffer, 0);
     return;
 
   if (executing_query)
